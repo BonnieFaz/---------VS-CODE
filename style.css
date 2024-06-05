@@ -1,0 +1,37 @@
+.fio {
+    color: red;
+    display: inline;
+}
+
+#myPhotowithBros {
+    width: 70%;
+    display: block;
+}
+
+.calc label {
+    display: block;
+}
+
+li:first-child {
+    color:blue
+}
+
+li:last-child {
+    color:red
+}
+
+li:nth-child(7) {
+    color:coral
+}
+
+li::after {
+    content: "."
+}
+
+.dynamicForm label {
+    display: block;
+}
+
+.courseForm label {
+    display: block;
+}

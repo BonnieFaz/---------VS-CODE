@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moe резюме</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- <h1 class="fio">Фамилия</h1>
+    <h2 class="fio">Имя</h2>
+    <h3 class="fio">Отчество</h3>
+    <a href="https://t.me/bonniefazix">Мой Телеграм</a>
+    <img id="myPhotowithBros" src="sonar_crying_in_corner.png" alt="Сонар плачет в сторонке">
+    
+    <h2>Мои навыки:</h2>
+    <ul>
+        <li>Умею делать 3Д модели</li>
+        <li>Хорошо играю в Фортнайт</li>
+        <li>И еще что-то...</li>
+    </ul>
+
+    <h2>Языки, которыми я владею:</h2>
+    <ol>
+        <li>русский</li>
+        <li>английский (почти)</li>
+        <li>узбекский (на самом деле нет)</li>
+    </ol>
+
+    <!-- <h3>Калькулятор</h3>
+    <div class="calc">
+      <label>
+        a = 
+        <input type="number" name="x">
+      </label>
+      <label>
+        b = 
+        <input type="number" name="y">
+      </label>
+      <button onclick="calcSum()">+</button>
+      <button onclick="calcDifference()">-</button>
+      <button onclick="calcProduct()">*</button>
+      <button onclick="calcQuotient()">/</button>
+      <button onclick="calcSquare()">Возвести в квадрат</button>
+      <div id="calcResult">Результат: </div>
+    
+    </div> -->
+
+    <h2>Динамическая форма</h2>
+    <div class="dynamicForm">
+      <label>
+        Страна:
+        <select name="country" oninput="codeDetector()">
+          <option value="none">Выберите страну</option>
+          <option value="uz">Узбекистан</option>
+          <option value="ru">Россия</option>
+          <option value="usa">США</option>
+        </select>
+      </label>
+      <label>
+        Телефон:
+        <input type="tel" name="phone">
+      </label>
+      <label>
+        <input type="checkbox" id="confirm" onchange="activateButton()">
+        Подтвердить обработку данных
+      </label>
+      <button disabled>Отправить</button>
+    </div> 
+
+
+    <title>Интерактивная форма</title>
+    <style>
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender">
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+        </select>
+
+        <div id="additionalFields">
+
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const genderSelect = document.getElementById('gender');
+        const additionalFieldsContainer = document.getElementById('additionalFields');
+
+        genderSelect.addEventListener('change', () => {
+            const selectedGender = genderSelect.value;
+
+            additionalFieldsContainer.innerHTML = '';
+
+            if (selectedGender === 'male') {
+                const shoeSizeInput = createInput('shoeSize', 'Размер обуви:');
+                additionalFieldsContainer.appendChild(shoeSizeInput);
+            } else if (selectedGender === 'female') {
+                const favoriteSportInput = createInput('favoriteSport', 'Любимый вид спорта:');
+                additionalFieldsContainer.appendChild(favoriteSportInput);
+            }
+        });
+
+        function createInput(id, labelText) {
+            const label = document.createElement('label');
+            label.textContent = labelText;
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.id = id;
+            input.name = id;
+
+            label.appendChild(input);
+            return label;
+        }
+    </script>
+</body>
+</html>
+ 
+</body>
+</html><h2>Калькулятор стоимости обучения</h2>
+<div class="courseForm">
+    <label>
+        Вид курса:
+        <select name="course" id="courceSelect" oninput="courceCalculator()">
+            <option value="none">Выберите курс</option>
+            <option value="python">Python</option>
+            <option value="frontend">Frontend</option>
+            <option value="da">Data аналитик</option>
+        </select>
+    </label>
+    <label>
+        Скидка:
+        <input type="range" name="discountRange" oninput="courceCalculator()" min="0" max="50" value="0" step="5">
+        <span id></span>
+        <div id="discountValue">5%</div>
+    </label>
+    <label>
+        Сумма:
+        <input type="number" id="courceSum" readonly>
+    </label>
+</div>
+
+
+
+
+    <script src="./script.js"></script>
+</body> 
+</html>
+
+<title>Конвертер валют</title>
+</head>
+<body>
+    <div class="convert_block_item">
+        <input type="number" id="val" placeholder="Введите сумму...">
+        <select id="cur1">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+        </select>
+    </div> 
+    <div class="convert_block_item">
+        <div class="convert_result">= 00,000</div>
+        <select id="cur2">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+        </select>
+    </div>
+
